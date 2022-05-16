@@ -1,0 +1,201 @@
+/* 
+#757575 - основной цвет текста + контакты(телефон, почта)
+#212121 - заголовки, текст на кнопках, текст в хедере
+#2196F3 - акцент
+#FFFFFF - герой 
+#2F303A - фон 1(там где герой)
+#F5F4FA - фон наша комаанда / цвет фона кнопок в портфолио
+*/
+
+:root{
+    --primary-text-colour: #757575;
+    --title-text-colour: #212121;
+    --accent-colour: #2196F3;
+    --primary-white-colour: #FFFFFF;
+    --secondary-bg-colour: #F5F4FA;/* кнопки в портфолио и фон наша команда*/
+}
+
+
+body{
+    color: var(--primary-text-colour);
+    background-color: var(--primary-white-colour);
+    font-family: Roboto, sans-serif;
+    letter-spacing: 0.03em;
+    }
+
+/* Название секций */
+.section-title {
+    color: var(--title-text-colour);
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+}
+
+.section-title-features {
+    color: var(--title-text-colour);
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+}
+
+.section-title-features-text {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.team-name{
+    color: var(--title-text-colour);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;
+}
+
+.team-position{
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;
+}
+
+/* Герой */
+.hero {
+    background-color: #2F303A;
+}
+
+.hero-title {
+    color: var(--primary-white-colour);
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+/*Секции в портфолио*/
+.project-title {
+    color: var(--title-text-colour);
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+}
+
+.description {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Для сброса */
+.list{
+    list-style: none;
+}
+
+/* Цвет лого */
+.logo{
+    color: #000000;
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    text-decoration: none;
+}
+
+.logo-web{
+    color: var(--accent-colour);
+    text-decoration: none;
+}
+
+/* Навигация сайта*/
+.site-nav a,
+.contact-link,
+.nav-link{
+    color: var(--title-text-colour);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    text-decoration: none;
+}
+
+.contact-link{
+    color: var(--primary-text-colour);
+    text-decoration: none;
+}
+
+.site-nav .link.current{
+    color: var(--accent-colour);
+}
+
+
+/* Кнопки */
+.button{
+    color: var(--title-text-colour);
+    background-color: var(--secondary-bg-colour);
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* Смена фона и текста кнопок в портфолио*/
+
+.portfolio.btn{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+    font-family: inherit;
+}
+
+.btn.link:hover,
+.btn.link:focus{
+    color:var(--primary-white-colour);
+    background-color: var(--accent-colour);
+}
+
+
+.portfolio.btn:active{
+    color:var(--primary-white-colour);
+    background-color: var(--accent-colour);
+}
+
+/* Кнопка в файле html*/
+.button.order {
+    color: var(--primary-white-colour);
+    background-color: var(--accent-colour);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;   
+}
+
+.footer{
+    background-color: #2F303A;
+}
+
+.footer .logo{
+    color: var(--primary-white-colour);
+}
+
+.footer-address{
+    color: var(--primary-white-colour);
+    font-style: normal;
+    text-decoration: none;
+}
+
+.footer .contact-link{
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*Контакты + навигация(студия, портфолио, контакты)*/
+.link:hover,
+.link:focus,
+.contact-link:hover,
+.contact-link:focus,
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--accent-colour);
+}
+
+.portfolio.btn.active{
+    color: var(--primary-white-colour);
+    background-color: var(--accent-colour);
+}
