@@ -199,3 +199,15 @@ body{
     color: var(--primary-white-colour);
     background-color: var(--accent-colour);
 }
+
+
+/* домашкаа 3 */
+/* потрібно буде поставити на початок файлу 
+<div> class="container" </div>
+   
+.container{
+    width: 1200px;  або 1230, бо по боках ж 15пх:
+    padding-left: 15px;
+    padding-right 15px;
+     */
+}
