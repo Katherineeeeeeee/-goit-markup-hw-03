@@ -23,8 +23,31 @@ body{
     letter-spacing: 0.03em;
     }
 
+
+    /* Дз 3, B15 */
+.container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    outline: 2px solid tomato;
+}
+
+.section{
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+
+  /* 
+.container{
+      або 1230
+    padding-right 15px;
+     */
+
+
 /* Название секций */
 .section-title {
+    margin: 0;
     color: var(--title-text-colour);
     font-size: 36px;
     line-height: 1.16;
@@ -32,6 +55,8 @@ body{
 }
 
 .section-title-features {
+    margin-top: 0;
+    margin-bottom: 10px;
     color: var(--title-text-colour);
     font-size: 14px;
     line-height: 1.14;
@@ -39,11 +64,27 @@ body{
 }
 
 .section-title-features-text {
+    margin-top: 0;
+    margin-bottom: 30px;
     font-size: 14px;
     line-height: 1.7;
 }
 
+.section-title.works,
+.section-title.team{
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+.section-photo.works,
+.section-photo.team{
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
 .team-name{
+    margin-top: 0;
+    margin-bottom: 10px;
     color: var(--title-text-colour);
     font-weight: 500;
     font-size: 16px;
@@ -60,14 +101,16 @@ body{
 /* Герой */
 .hero {
     background-color: #2F303A;
+    text-align: center;
 }
 
 .hero-title {
+    margin-top: 0;
+    margin-bottom: 30px;
     color: var(--primary-white-colour);
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
-    text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
 }
@@ -87,7 +130,20 @@ body{
 
 /* Для сброса */
 .list{
+    margin: 0;
+    padding: 0;
     list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p{
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 /* Цвет лого */
@@ -116,7 +172,9 @@ body{
     text-decoration: none;
 }
 
-.contact-link{
+.contact-link.header{
+    margin-top: 0;
+    margin-bottom: 50px;
     color: var(--primary-text-colour);
     text-decoration: none;
 }
@@ -162,7 +220,7 @@ body{
     background-color: var(--accent-colour);
     font-weight: 700;
     font-size: 16px;
-    line-height: 1.87;   
+    line-height: 1.87;  
 }
 
 .button.order:hover,
@@ -178,10 +236,13 @@ body{
 }
 
 .footer .logo{
+    margin-top: 0;
+    margin-bottom: 60px;
     color: var(--primary-white-colour);
 }
 
 .footer-address{
+    
     color: var(--primary-white-colour);
     font-style: normal;
     text-decoration: none;
@@ -191,6 +252,16 @@ body{
     color: rgba(255, 255, 255, 0.6);
     font-weight: 400;
     font-style: normal;
+}
+
+.end{
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.address{
+    margin-top: 0;
+    margin-bottom: 60px;
 }
 
 /*Контакты + навигация(студия, портфолио, контакты)*/
@@ -209,12 +280,16 @@ body{
 }
 
 
-/* домашкаа 3 */
-/* потрібно буде поставити на початок файлу 
-<div> class="container" </div>
-   
-.container{
-    width: 1200px;  або 1230, бо по боках ж 15пх:
-    padding-left: 15px;
-    padding-right 15px;
-     */
+/* Клас для скривания */
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+  }
