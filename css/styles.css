@@ -13,8 +13,12 @@
     --accent-colour: #2196F3;
     --primary-white-colour: #FFFFFF;
     --secondary-bg-colour: #F5F4FA;/* кнопки в портфолио и фон наша команда*/
-}
 
+
+    /* grid */
+     --items: 1;     /*к-сть елементів */
+    --indent: 30px;  /* розмір відступів */
+}
 
 body{
     font-family: Roboto, sans-serif;
@@ -43,7 +47,6 @@ ul{
     margin-bottom: 0;
 }
 
-/*  */
 .container {
     margin-left: auto;
     margin-right: auto;
@@ -51,8 +54,6 @@ ul{
     padding-right: 15px;
 
     width: 1200px;
-
-    outline: 2px solid tomato;
 }
 
 .section{
@@ -60,37 +61,75 @@ ul{
     padding-bottom: 94px;
 }
 
-/* Header */
+/* Сітка для flex-box */
 
-/* .page-header{
-    display: flex;   
-    align-items: center;
-    /* justify-content: space-between; */
-
-
-/* повинно бути лого, але якщо я його перемішаю - стиль */
-
-
-.section.works{
-    padding-top: 47px;
+/* На елементи - ul */
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+    margin: calc( -1 * var(--indent) / 2);
+}
+/* На елементи - li */
+.grid-item{
+    flex-basis: calc((100% - var(--indent) * var(--items)) / var(--items));
+    margin: calc(var(--indent) / 2);
 }
 
-.benefits{
+/* Флекс до хедер */
+
+.header{
+    padding-top: 32px;
+    padding-bottom: 32px;
+    border-bottom:1px solid #EEEEEE;
+}
+
+.header-nav{
+    display: flex;
+    align-items: center;
+}
+
+.navigation{
+    margin-right: 50px;
+}
+
+.header-logo{
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.site-nav{
+    display: flex;
+
+    width: 294px;
+    justify-content: space-between;
+    margin-right: 331px;
+} 
+
+.nav-item:not(:last-child){
+    margin-right: 50px;
+}
+
+.contacts-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contacts-item:not(:last-child){
+    margin-right: 50px;
+}
+
+
+/* Особливості */
+.features{
     padding-bottom: 47px;
 }
 
-/* Название секций */
-.section-title {
-    margin: 0;
+.feature-list{
+    --items: 4;
+} 
 
-    font-size: 36px;
-    line-height: 1.16;
-    text-align: center;
-
-    color: var(--title-text-colour);
-}
-
-.section-title-features {
+.section-title-features{
     margin-top: 0;
     margin-bottom: 10px;
 
@@ -102,16 +141,34 @@ ul{
 }
 
 .section-title-features-text {
-    margin-top: 0;
-    margin-bottom: 30px;
+    /* margin-top: 0;
+    margin-bottom: 30px; */
 
     font-size: 14px;
     line-height: 1.7;
+} 
+
+
+/* Назва заголовків в секціях */
+.section-title {
+    margin: 0;
+
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+
+    color: var(--title-text-colour);
 }
 
-.section-title-features-text:last-child{
-    margin-bottom: 0;
+
+/* Чем занимаются */
+.works{
+    padding-top: 47px;
 }
+.works-list{
+    --items: 3;
+}
+
 
 .section-title.works,
 .section-title.team{
@@ -125,6 +182,17 @@ ul{
     margin-top: 0;
     margin-bottom: 30px;
 }
+
+/* Команда */
+.team-list{
+    --items: 4;
+}
+
+.team-item{
+    width: 269px;
+    border: 1px solid #EEEEEE;
+}
+
 
 .team-name{
     margin-top: 0;
@@ -144,12 +212,6 @@ ul{
     text-align: center;
 }
 
-/* 
-.site-nav a{
-    display: flex;
-    padding-top: 32px;
-    padding-bottom: 32px;
-} */
 
 .contact-link.header{
     /* display: flex;
@@ -162,17 +224,9 @@ ul{
     color: var(--primary-text-colour);
 }
 
-.main-potfolio{
-    padding-right: 215px;
-    padding-left: 215px;
-}
-
 /* Герой */
 .hero {
-    padding-top: 200px;
-    padding-right: 452px;
-    padding-bottom: 280px;
-    padding-left: 452px;
+    padding: 200px 0;
 
     text-align: center;
 
@@ -193,7 +247,31 @@ ul{
     color: var(--primary-white-colour);
 }
 
-/*Секции в портфолио*/
+
+/* Портфолиo */
+.potfolio-box{
+    display: flex; 
+}
+
+.btn-list{
+    display: flex;
+    --items: 5; 
+} 
+
+.btn.item{
+    justify-content: center;
+}
+
+.portfolio-list{
+    --items: 9;
+}
+
+.portfolio-item{
+    width: 370px;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+
 .project-title {
     margin-top: 20px;
     margin-bottom: 4px;
@@ -210,6 +288,13 @@ ul{
     line-height: 1.8;
 }
 
+.about-projects{
+    padding: 20px 24px;
+}
+
+
+
+
 
 /* Цвет лого */
 .logo{
@@ -217,7 +302,8 @@ ul{
     margin-bottom: 93px;
     padding-top: 24px;
     padding-bottom: 25px; */
-    
+
+
     font-family: Raleway;
     font-weight: 700;
     font-size: 26px;
@@ -232,13 +318,10 @@ ul{
     text-decoration: none;
 }
 
-/* Навигация сайта*/
+/* Навигація сайта*/
 .site-nav a,
 .contact-link,
 .nav-link{
-    /* margin-top: 0;
-    margin-bottom: 50px; */
-
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -247,22 +330,8 @@ ul{
     color: var(--title-text-colour);
 }
 
-
 .site-nav .link.current{
     color: var(--accent-colour);
-}
-/* флексы для хедера */
-/* .site-nav{
-    display: flex;
-    margin-left: 93px;
-}
-
-.site-nav .item{
-    margin-right: 50px;
-}
-
-.site-nav .item:last-child{
-    margin-right: 0;
 }
 
 
@@ -276,22 +345,22 @@ ul{
     background-color: var(--secondary-bg-colour);
 }
 
-/* Смена фона и текста кнопок в портфолио*/
-
+/* Зміна фона */
 .portfolio.btn{
+    justify-content: center;
     margin-top: 0;
+    margin-right: 8px;
     margin-bottom: 50px;
-    padding-top: 6px;
-    padding-right: 22px;
-    padding-bottom: 6px;
-    padding-left: 22px;
+    padding: 6px 22px; 
 
     font-weight: 500;
     font-size: 16px;
     line-height: 1.6;
+
     text-align: center;
     font-family: inherit;
 }
+
 
 .btn.link:hover,
 .btn.link:focus{
@@ -299,12 +368,12 @@ ul{
     background-color: var(--accent-colour);
 }
 
-
 .portfolio.btn:active{
     color:var(--primary-white-colour);
     background-color: var(--accent-colour);
 }
-/* Кнопка в файле html*/
+
+/* Кнопка в файлі html*/
 .button.order {
     font-weight: 700;
     font-size: 16px;
@@ -323,17 +392,24 @@ ul{
 /* футер */
 
 .footer{
+    padding-top: 60px;
+    padding-bottom: 60px;
     background-color: #2F303A;
 }
 
 .footer .logo{
     margin-top: 0;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
 
     color: var(--primary-white-colour);
 }
 
+.address{
+    padding-top: 20px;
+}
+
 .footer-address{
+    margin-bottom: 9px;
     font-style: normal;
     text-decoration: none;
 
@@ -341,23 +417,21 @@ ul{
 }
 
 .footer .contact-link{
+    margin-bottom: 9px;
     font-weight: 400;
     font-style: normal;
 
     color: rgba(255, 255, 255, 0.6);
 }
 
-.end{
-    margin-top: 0;
-    margin-bottom: 20px;
-}
 
 .address{
     margin-top: 0;
     margin-bottom: 60px;
 }
 
-/*Контакты + навигация(студия, портфолио, контакты)*/
+
+/*Контакти + навігація(студия, портфолио, контакты)*/
 .link:hover,
 .link:focus,
 .contact-link:hover,
@@ -387,7 +461,3 @@ ul{
     margin: -1px;
 }
 
-  /* портфолио */
-.about-projects{
-    padding: 20px 24px;
-}

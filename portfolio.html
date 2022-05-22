@@ -22,46 +22,48 @@
   </head>
 
   <!--Шапка-->
-  <header>
-    <div class="container">
-      <nav>
-        <a class="logo" href="./index.html"><span class="logo-web">Web</span>Studio</a>
+  <header class="header">
+    <div class="container header-box">
+      <div class="header-nav">
+        <a class="logo header-logo" href="./index.html"><span class="logo-web">Web</span>Studio</a>
 
-        <ul class="site-nav list">
-          <li class="item"><a class="nav-link" href="./index.html">Студия</a></li>
-          <li class="item"><a class="link current" href="./portfolio.html">Портфолио</a></li>
-          <li class="item"><a class="nav-link" href="">Контакты</a></li>
+        <nav class="navigation">
+          <ul class="site-nav list">
+            <li class="nav-item"><a class="nav-link" href="./index.html">Студия</a></li>
+            <li class="nav-item"><a class="link current" href="./portfolio.html">Портфолио</a></li>
+            <li class="nav-item"><a class="nav-link" href="">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <ul class="contacts-header list">
+          <li class="contacts-item">
+            <a class="contact-link header" href="mailto:info@devstudio.com">info@devstudio.com</a>
+          </li>
+          <li class="contacts-item">
+            <a class="contact-link header" href="tel:+380961111111">+38 096 111 11 11</a>
+          </li>
         </ul>
-      </nav>
-    </div>
-
-    <div class="container">
-      <ul class="list">
-        <li class="item">
-          <a class="contact-link header" href="mailto:info@devstudio.com">info@devstudio.com</a>
-        </li>
-        <li class="item"><a class="contact-link header" href="tel:+380961111111">+38 096 111 11 11</a></li>
-      </ul>
+      </div>
     </div>
   </header>
 
   <main>
-    <section class="section main-potfolio">
-      <div class="container">
+    <section class="section">
+      <div class="container portfolio-box">
         <h1 class="section-title visually-hidden">Портфолио</h1>
 
         <!--Радио кнопки-->
-        <ul class="list">
-          <li><button class="portfolio btn link active" type="button">Все</button></li>
-          <li><button class="portfolio btn link" type="button">Веб-сайты</button></li>
-          <li><button class="portfolio btn link" type="button">Приложения</button></li>
-          <li><button class="portfolio btn link" type="button">Дизайн</button></li>
-          <li><button class="portfolio btn link" type="button">Маркетинг</button></li>
+        <ul class="btn-list grid list">
+          <li class="btn-item grid-item"><button class="portfolio btn link active" type="button">Все</button></li>
+          <li class="btn-item grid-item"><button class="portfolio btn link" type="button">Веб-сайты</button></li>
+          <li class="btn-item grid-item"><button class="portfolio btn link" type="button">Приложения</button></li>
+          <li class="btn-item grid-item"><button class="portfolio btn link" type="button">Дизайн</button></li>
+          <li class="btn-item grid-item"><button class="portfolio btn link" type="button">Маркетинг</button></li>
         </ul>
 
         <!--Примеры работ-->
-        <ul class="list">
-          <li>
+        <ul class="portfolio-list grid list">
+          <li class="portfolio-item grid-item">
             <img
               class="section-photo portfolio"
               src="./images/img-laptop.jpg"
@@ -74,7 +76,7 @@
             </div>
           </li>
 
-          <li>
+          <li class="portfolio-item grid-item">
             <img
               class="section-photo portfolio"
               src="./images/img-players-squoosh.jpg"
@@ -87,7 +89,7 @@
             </div>
           </li>
 
-          <li>
+          <li class="portfolio-item grid-item">
             <img
               class="section-photo portfolio"
               src="./images/img-restaurant-squoosh.jpg"
@@ -100,7 +102,7 @@
             </div>
           </li>
 
-          <li>
+          <li class="portfolio-item grid-item">
             <img
               class="section-photo portfolio"
               src="./images/img-headphones.jpg"
@@ -113,7 +115,7 @@
             </div>
           </li>
 
-          <li>
+          <li class="portfolio-item grid-item">
             <img
               class="section-photo portfolio"
               src="./images/img-boxes.jpg"
@@ -126,7 +128,7 @@
             </div>
           </li>
 
-          <li>
+          <li class="portfolio-item grid-item">
             <img
               class="section-photo portfolio"
               src="./images/img-desktop.jpg"
@@ -139,7 +141,7 @@
             </div>
           </li>
 
-          <li>
+          <li class="portfolio-item grid-item">
             <img
               class="section-photo portfolio"
               src="./images/img-magazine.jpg"
@@ -152,7 +154,7 @@
             </div>
           </li>
 
-          <li>
+          <li class="portfolio-item grid-item">
             <img
               class="section-photo portfolio"
               src="./images/img-project-lab.jpg"
@@ -165,7 +167,7 @@
             </div>
           </li>
 
-          <li>
+          <li class="portfolio-item grid-item">
             <img
               class="section-photo portfolio"
               src="./images/img-copy-on-laptop.jpg"
@@ -190,12 +192,12 @@
       <address class="address">
         <ul class="list">
           <li>
-            <a class="footer-address end" href="">г. Киев, пр-т Леси Украинки,26</a>
+            <a class="footer-address" href="">г. Киев, пр-т Леси Украинки,26</a>
           </li>
           <li>
-            <a class="contact-link end" href="mailto:info@example.com">info@example.com</a>
+            <a class="contact-link" href="mailto:info@example.com">info@example.com</a>
           </li>
-          <li><a class="contact-link end" href="tel:+380991111111">+38 099 111 11 11</a></li>
+          <li><a class="contact-link" href="tel:+380991111111">+38 099 111 11 11</a></li>
         </ul>
       </address>
     </div>
