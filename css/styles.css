@@ -125,9 +125,10 @@ img{
 
 
 /* Особливості */
-.features{
+
+/* .features{
     padding-bottom: 47px;
-}
+} */
 
 .feature-list{
     --items: 4;
@@ -186,15 +187,14 @@ img{
 
 .team-item{
     width: 270px;
-    border: 1px solid #EEEEEE;
 }
 
 
 .team-desc{
     padding-top: 30px;
-    padding-right: 60px;
+    padding-right: 20px;
     padding-bottom: 30px;
-    padding-left: 60px;
+    padding-left: 20px;
 
     text-align: center;
     justify-content: center;
@@ -265,6 +265,12 @@ img{
     margin-right: 8px;
 }
 
+.btn-item:last-child{
+    margin-right: 0px;
+}
+
+
+
 .portfolio-list{
     --items: 9;
 }
@@ -275,7 +281,6 @@ img{
 
 
 .project-title {
-    margin-top: 20px;
     margin-bottom: 4px;
 
     font-size: 18px;
@@ -293,10 +298,9 @@ img{
 .about-projects{
     padding: 20px 24px;
     border-bottom: 1px solid #EEEEEE;
+    border-left: 1px solid #EEEEEE;
+    border-right: 1px solid #EEEEEE;
 }
-
-
-
 
 
 /* Цвет лого */
@@ -358,7 +362,7 @@ img{
 
     font-family: inherit;
 
-    /* background-color: var(--secondary-bg-colour); */
+    background-color: var(--secondary-bg-colour);
 }
 
 
@@ -404,7 +408,7 @@ img{
 }
 
 .address{
-    padding-top: 20px;
+    margin-top: 20px;
 }
 
 .footer-item:not(:last-child){
