@@ -47,6 +47,10 @@ ul{
     margin-bottom: 0;
 }
 
+img{
+    display: block;
+}
+
 .container {
     margin-left: auto;
     margin-right: auto;
@@ -78,41 +82,41 @@ ul{
 /* Флекс до хедер */
 
 .header{
-    padding-top: 32px;
-    padding-bottom: 32px;
     border-bottom:1px solid #EEEEEE;
+    
 }
 
 .header-nav{
     display: flex;
     align-items: center;
-}
-
-.navigation{
-    margin-right: 50px;
-}
+} 
 
 .header-logo{
     display: flex;
     align-items: center;
-    margin-right: auto;
+    margin-right: 93px;
 }
 
 .site-nav{
     display: flex;
-
-    width: 294px;
-    justify-content: space-between;
-    margin-right: 331px;
 } 
+
+.navigation{
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
 
 .nav-item:not(:last-child){
     margin-right: 50px;
 }
 
+
 .contacts-header{
     display: flex;
     justify-content: space-between;
+    margin-left: auto;
 }
 
 .contacts-item:not(:last-child){
@@ -152,6 +156,7 @@ ul{
 /* Назва заголовків в секціях */
 .section-title {
     margin: 0;
+    margin-bottom: 50px;
 
     font-size: 36px;
     line-height: 1.16;
@@ -162,26 +167,17 @@ ul{
 
 
 /* Чем занимаются */
-.works{
-    padding-top: 47px;
-}
+
 .works-list{
     --items: 3;
 }
 
-
-.section-title.works,
-.section-title.team{
-    margin-top: 0;
-    margin-bottom: 50px;
-}
-
-.section-photo.works,
-.section-photo.team,
 .section-photo.portfolio{
     margin-top: 0;
     margin-bottom: 30px;
 }
+
+
 
 /* Команда */
 .team-list{
@@ -189,10 +185,20 @@ ul{
 }
 
 .team-item{
-    width: 269px;
+    width: 270px;
     border: 1px solid #EEEEEE;
 }
 
+
+.team-desc{
+    padding-top: 30px;
+    padding-right: 60px;
+    padding-bottom: 30px;
+    padding-left: 60px;
+
+    text-align: center;
+    justify-content: center;
+}
 
 .team-name{
     margin-top: 0;
@@ -209,16 +215,10 @@ ul{
 .team-position{
     font-size: 16px;
     line-height: 1.18;
-    text-align: center;
 }
 
 
 .contact-link.header{
-    /* display: flex;
-    margin-top: 0;
-    margin-right: 50px; 
-    margin-bottom: 50px; 
-    margin-left: auto; */
     text-decoration: none;
 
     color: var(--primary-text-colour);
@@ -257,12 +257,12 @@ ul{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 50px;
 } 
 
 .btn-item{
     margin-top: 0;
     margin-right: 8px;
-    margin-bottom: 50px;
 }
 
 .portfolio-list{
@@ -271,7 +271,6 @@ ul{
 
 .portfolio-item{
     width: 370px;
-    border-bottom: 1px solid #EEEEEE;
 }
 
 
@@ -293,6 +292,7 @@ ul{
 
 .about-projects{
     padding: 20px 24px;
+    border-bottom: 1px solid #EEEEEE;
 }
 
 
@@ -357,6 +357,8 @@ ul{
     line-height: 1.6;
 
     font-family: inherit;
+
+    /* background-color: var(--secondary-bg-colour); */
 }
 
 
@@ -397,7 +399,6 @@ ul{
 
 .footer .logo{
     margin-top: 0;
-    margin-bottom: 20px;
 
     color: var(--primary-white-colour);
 }
@@ -406,8 +407,11 @@ ul{
     padding-top: 20px;
 }
 
-.footer-address{
+.footer-item:not(:last-child){
     margin-bottom: 9px;
+}
+
+.footer-address{
     font-style: normal;
     text-decoration: none;
 
@@ -415,7 +419,6 @@ ul{
 }
 
 .footer .contact-link{
-    margin-bottom: 9px;
     font-weight: 400;
     font-style: normal;
 
@@ -423,10 +426,6 @@ ul{
 }
 
 
-.address{
-    margin-top: 0;
-    margin-bottom: 60px;
-}
 
 
 /*Контакти + навігація(студия, портфолио, контакты)*/
